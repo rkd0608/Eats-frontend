@@ -5,7 +5,7 @@ import styles from './SubNav.module.css';
 export function SubNav(){
 
     return (
-        <div className={styles['container']}>
+        <div className={styles.container}>
                 <div className= {styles['sub-nav']}>
                     <div>
                         <SubNavitem label='Restaurant' icon='fa-utensils' />
@@ -30,10 +30,10 @@ export function SubNav(){
                         </button>
 
                     </div>
-                    
+
 
                 </div>
 
-    </div>  
+    </div>
     );
 }

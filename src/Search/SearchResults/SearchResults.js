@@ -10,10 +10,10 @@ export function SearchResults(props){
 
         searchResults = props.businesses.map(b => <SearchResult key={b.id} business={b} />);
 
-        return (<Spinner/>);
+        
     }
 
-    
+
 
     return(
         <div className={styles['search-results']}>

@@ -5,11 +5,11 @@ import styles from './LandingPage.module.css';
 import { SearchBar } from '../SearchBar/SearchBar';
 import { SearchSuggestions } from './SearchSuggestions/SearchSuggestions';
 import useReactRouter from 'use-react-router';
-import encodeURI from 'use-react-router';
+
 
 export function LandingPage(){
 
-    const {history} = useReactRouter();
+    const { history } = useReactRouter();
 
     function search(term, location){
         const urlEncodedTerm = encodeURI(term);
@@ -18,10 +18,10 @@ export function LandingPage(){
     }
 
     return (
-        <div className={styles['landing']}>
-            <div className={styles['search-area']}> 
+        <div className={styles.landing}>
+            <div className={styles['search-area']}>
 
-            <TopNav />  
+            <TopNav />
             <img src={logo} className={styles.logo} alt='logo'></img>
             <SearchBar search={search}/>
             <SearchSuggestions />
@@ -29,4 +29,3 @@ export function LandingPage(){
         </div>
     );
 }
-

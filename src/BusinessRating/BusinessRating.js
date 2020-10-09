@@ -5,7 +5,7 @@ import Rating from 'react-rating';
 export function BusinessRating(props){
 
     return (
-        <div className={styles['rating']}>
+        <div className={styles.rating}>
 
             <Rating
                 emptySymbol = "far fa-star"
