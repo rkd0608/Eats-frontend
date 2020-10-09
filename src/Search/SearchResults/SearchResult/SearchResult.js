@@ -24,8 +24,7 @@ export function SearchResult(props){
             </div>
             <div className={styles['contact-info']}>
                 <p>{props.business.phone} </p>
-                <p>Example Street 5</p>
-                <p>12345 Buffalo</p>
+                {addressLines}
             </div>
             
         </div>

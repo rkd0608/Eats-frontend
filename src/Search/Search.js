@@ -14,7 +14,16 @@ export function Search(){
     const locationParam = params.get('find_loc');
     const [businesses, amountResults, searchParams, performSearch] = useBusinessSearch(term, location);
 
+    const { history } = useReactRouter();
+
+    if(!term || !location){
+        history.push('/');
+    }
+
     function search(term, location) {
+        const encodedTerm = encodeURI(term);
+        const encodedLocation = encodeURI(location);
+        history.push(`/search?find_desc=${encodedTerm}&find_loc=${encodedLocation}`);
         performSearch({term,location});
     }
 
