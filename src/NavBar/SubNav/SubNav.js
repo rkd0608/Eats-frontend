@@ -8,13 +8,13 @@ export function SubNav(){
         <div className={styles.container}>
                 <div className= {styles['sub-nav']}>
                     <div>
-                        <SubNavitem label='Restaurant' icon='fa-utensils' />
-                        <SubNavitem label='Home Services' icon='fa-home' />
-                        <SubNavitem label='Auto Services' icon='fa-car-side' />
+                        <SubNavitem label='Cuisine' icon='fa-utensils' />
+                        <SubNavitem label='People' icon='fa-user-friends' />
+                        <SubNavitem label='Distance' icon='fa-road' />
                         <SubNavitem label='More' icon='fa-info-circle' showRightBorder />
 
                     </div>
-                    <div>
+                    {/* <div>
                         <button className={`button ${styles['subnav-button']} ${styles['omit-right-border']}`}>
                             <span className="icon">
                                 <i className="fas fa-pen" />
@@ -29,7 +29,7 @@ export function SubNav(){
                             <span>For Businesses</span>
                         </button>
 
-                    </div>
+                    </div> */}
 
 
                 </div>

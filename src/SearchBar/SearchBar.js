@@ -29,7 +29,7 @@ export function SearchBar(props){
                         onChange={(e) => setTerm(e.target.value)}
                         type="text" 
                         value={term}
-                        placeholder="Burgers, Barbers, Spas, Handymen" 
+                        placeholder="Search your favorite food" 
                     />
                 </div>
 
@@ -44,7 +44,7 @@ export function SearchBar(props){
                         onChange= {(e) => setLocation(e.target.value)}
                         type="text"
                         value={location} 
-                        placeholder="Where" 
+                        placeholder="Set your location" 
                     />
                 </div>
                 <div className={`button ${sizeClass} ${styles['search-button']}`} onClick={Submit}>
