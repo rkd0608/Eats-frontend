@@ -4,6 +4,7 @@ import {SubNav} from '../NavBar/SubNav/SubNav';
 import {SearchResultsSummary} from './SearchResultsSummary/SearchResultsSummary';
 import {SearchResults} from './SearchResults/SearchResults';
 import useReactRouter from 'use-react-router';
+import { useBusinessSearch } from '../hooks/yelp-api/useBusinessSearch';
 
 export function Search(){
 
@@ -11,14 +12,15 @@ export function Search(){
     const params = new URLSearchParams(location.search);
     const term = params.get('find_desc');
     const locationParam = params.get('find_loc');
+    const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(term, location);
 
     return (
         <div> 
             <NavBar term={term} location={locationParam}/>
             <SubNav />
             <SearchResultsSummary term={term} location={locationParam} />
-            <SearchResults />
-            <SearchResults />
+            <SearchResults businesses={businesses}/>
+            
         </div>
     );
 }
