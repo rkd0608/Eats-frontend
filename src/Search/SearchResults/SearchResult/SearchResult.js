@@ -4,7 +4,7 @@ import styles from './SearchResult.module.css';
 
 export function SearchResult(props){
     if(!props.business){
-        return(<div></div>);
+        return(<div> Error! Not Found</div>);
     }
 
     const tags = props.business.categories.map(category => (<span className={`tag ${styles['business-tag']}`} key={props.business.id + category.title}>{category.title}</span>));

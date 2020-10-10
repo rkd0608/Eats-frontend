@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavBar} from '../NavBar/NavBar';
-import {SubNav} from '../NavBar/SubNav/SubNav';
+//import {SubNav} from '../NavBar/SubNav/SubNav';
 import {SearchResultsSummary} from './SearchResultsSummary/SearchResultsSummary';
 import {SearchResults} from './SearchResults/SearchResults';
 import useReactRouter from 'use-react-router';
@@ -30,7 +30,7 @@ export function Search(){
     return (
         <div>
             <NavBar term={term} location={locationParam} search={search}/>
-            <SubNav />
+            {/* <SubNav /> */}
             <SearchResultsSummary term={searchParams.term}
                                   location={searchParams.location}
                                   amountResults={amountResults}
